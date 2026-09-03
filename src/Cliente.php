@@ -31,6 +31,19 @@ class Cliente extends AsaasController{
         }
     }
     
+    public function atualizarCriar($cpfCnpj, array $data){        
+        $listarClientes = $this->listar([
+            'cpfCnpj' => $cpfCnpj
+        ]);
+
+        if($listarClientes && $listarClientes->totalCount > 0){
+            $cliente = $listarClientes->data[0];
+            return $this->atualizar($cliente->id, $data);
+        }
+
+        return $this->criar($data);
+    }
+    
     public function listar(array $query = []){
         try{
             $response = $this->http->get('v3/customers', [

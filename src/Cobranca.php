@@ -8,7 +8,7 @@ use Exception;
 use GuzzleHttp\Exception\RequestException;
 
 class Cobranca extends AsaasController{
-    
+        
     public function criar(array $data){        
         try{
             $response = $this->http->post('v3/payments', [
