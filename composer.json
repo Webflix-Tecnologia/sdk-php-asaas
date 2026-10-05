@@ -1,5 +1,6 @@
 {
     "name": "webflixtec/sdk-php-asaas",
+    "version": "0.1.0",
     "description": "SDK das APIs Asaas",
     "keywords": ["api", "library", "psr-4", "asaas", "sdk"],
     "homepage": "https://github.com/Webflix-Tecnologia/sdk-php-asaas",
@@ -13,7 +14,7 @@
         }
     ],
     "require": {
-        "php": ">=8.2",
+        "php": ">=7.4 <8.0",
         "guzzlehttp/guzzle": "^7",
         "spatie/array-to-xml": "^2.17"
     },
