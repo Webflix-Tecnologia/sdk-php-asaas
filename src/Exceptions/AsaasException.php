@@ -36,9 +36,10 @@ class AsaasException extends Exception{
         
     }
     
-    public static function fromGuzzleException(ServerException|ClientException|BadResponseException|RequestException $ex){
-        $responseBody = '['.$ex::class.'] Body: ' . (string)$ex->getResponse()->getBody();
-        return new AsaasException( new Exception($responseBody, $ex->getCode(), $ex->getPrevious()) );
+    public static function fromGuzzleException($ex){
+        $className = get_class($ex);
+        $responseBody = '['.$className.'] Body: ' . (string)$ex->getResponse()->getBody(); 
+        return new AppMaxException( new Exception($responseBody, $ex->getCode(), $ex->getPrevious()) );
     }
     
 }

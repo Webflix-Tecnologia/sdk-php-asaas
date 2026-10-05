@@ -2,26 +2,28 @@
 
 namespace Asaas\Enum;
 
-enum BillingType: string {
-    case UNDEFINED = 'UNDEFINED';
-    case BOLETO = 'BOLETO';
-    case PIX = 'PIX';
-    case CREDIT_CARD = 'CREDIT_CARD';
-    
-    public function description(): string
-    {
-        return match ($this) {
-            self::UNDEFINED =>
-                'Não definida.',
+class BillingType{
+    public const UNDEFINED = 'UNDEFINED';
+    public const BOLETO = 'BOLETO';
+    public const PIX = 'PIX';
+    public const CREDIT_CARD = 'CREDIT_CARD';
 
-            self::BOLETO =>
-                'Boleto Bancário.',
-            
-            self::PIX =>
-                'Pix.',
-            
-            self::CREDIT_CARD =>
-                'Cartão de crédito.',
-        };
+    public static function description(string $billingType): string{
+        switch ($billingType) {
+            case self::UNDEFINED:
+                return 'Não definida.';
+
+            case self::BOLETO:
+                return 'Boleto Bancário.';
+
+            case self::PIX:
+                return 'Pix.';
+
+            case self::CREDIT_CARD:
+                return 'Cartão de crédito.';
+
+            default:
+                return '';
+        }
     }
 }
