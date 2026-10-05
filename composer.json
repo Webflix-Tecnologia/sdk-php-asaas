@@ -5,7 +5,7 @@
     "keywords": ["api", "library", "psr-4", "asaas", "sdk"],
     "homepage": "https://github.com/Webflix-Tecnologia/sdk-php-asaas",
     "type": "library",
-    "license": "proprietary", 
+    "license": "proprietary",
     "authors": [
         {
             "name": "Weslley Ceresa",
