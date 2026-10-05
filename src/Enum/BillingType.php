@@ -22,7 +22,7 @@ class BillingType{
             case self::CREDIT_CARD:
                 return 'Cartão de crédito.';
 
-            default:
+            default: 
                 return '';
         }
     }

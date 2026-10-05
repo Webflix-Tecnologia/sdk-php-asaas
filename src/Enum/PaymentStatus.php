@@ -21,7 +21,7 @@ class PaymentStatus{
     public const AUTHORIZED = 'AUTHORIZED';
     public const CREDIT_CARD_CAPTURE_REFUSED = 'CREDIT_CARD_CAPTURE_REFUSED';
 
-    public static function description(string $paymentStatus): string{
+    public static function description(string $paymentStatus): string{ 
         switch ($paymentStatus) {
             case self::PENDING:
                 return 'Aguardando pagamento';
